@@ -538,50 +538,104 @@ img {
     margin-top: 3rem;
 }
 
-.photo-item img {
-    width: 100%;
-    height: 250px; /* smaller than before */
-    object-fit: cover;
-    transition: var(--transition);
+/* Scale the whole photo-item on hover, not just the img */
+.photo-item {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-/* Lightbox Styles */
+.photo-item:hover {
+    transform: translateY(-8px) scale(1.03); /* scale whole container and makes it pop */
+    box-shadow: var(--shadow-lg);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 250px; /* keep size consistent */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* smooth zoom */
+}
+
+.photo-item:hover img {
+    transform: none; /* remove scale from image */
+}
+
+/* ===== Lightbox Overlay ===== */
 .lightbox {
-    display: none;
-    display: flex;
+    display: none; /* hidden by default */
     position: fixed;
     z-index: 999;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: 2rem;
+    overflow-y: auto; /* scroll if content is too tall */
+}
+
+.lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 95%;
+    max-height: 90vh;
+    animation: pop 0.4s ease; /* smooth pop animation */
+    position: relative;
 }
 
 .lightbox-img {
-    max-width: 90%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 70vh; /* leave room for caption */
     border-radius: var(--radius-md);
     margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-img:hover {
+    transform: scale(1.05);
 }
 
 .lightbox-caption {
     color: #fff;
     font-size: 1.2rem;
     text-align: center;
+    word-wrap: break-word;
+    max-width: 90%;
 }
-@media(max-width: 500px) {
-    .lightbox-caption { font-size: 1rem; }
-}
+
 .lightbox-close {
     position: absolute;
-    top: 1rem;
-    right: 2rem;
+    top: -10px;
+    right: -10px;
     font-size: 3rem;
     color: #fff;
     cursor: pointer;
+    transition: color 0.2s ease;
 }
+
+.lightbox-close:hover {
+    color: var(--accent);
+}
+
+/* Pop animation */
+@keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media(max-width: 500px) {
+    .lightbox-caption { font-size: 1rem; }
+    .lightbox-img { max-height: 60vh; }
+}
+
 
 .travel-philosophy {
     background: linear-gradient(135deg, rgba(14,165,233,0.1), rgba(236,72,153,0.1));

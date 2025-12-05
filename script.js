@@ -18,7 +18,7 @@ if (revealElements.length > 0) {
 }
 
 /* ===== Lightbox for Gallery Images ===== */
-const images = document.querySelectorAll('.lightbox-trigger'); // match your HTML
+const images = document.querySelectorAll('.lightbox-trigger');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.querySelector('.lightbox-img');
 const lightboxCaption = document.querySelector('.lightbox-caption');
@@ -32,17 +32,17 @@ images.forEach(img => {
   });
 });
 
-// Close lightbox when clicking the X
+// Close lightbox
 lightboxClose.addEventListener('click', () => {
   lightbox.style.display = 'none';
 });
 
-// Close if clicking outside the image
-lightbox.addEventListener('click', (e) => {
+lightbox.addEventListener('click', e => {
   if (e.target === lightbox) {
     lightbox.style.display = 'none';
   }
 });
+
 
 /* ===== Smooth Scroll ===== */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
