@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 /* ===== Scroll Reveal Animation ===== */
 const revealElements = document.querySelectorAll('.reveal');
 
@@ -35,7 +34,6 @@ images.forEach(img => {
 });
 
 // Close l
-=======
 // =============================
 // JavaScript for Travel Blog
 // =============================
@@ -75,4 +73,3 @@ if (allBtn) {
         destinationSections.forEach(section => section.style.display = 'block');
     });
 }
->>>>>>> Stashed changes
