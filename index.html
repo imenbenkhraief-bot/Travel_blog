@@ -9,12 +9,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-      <div class="logo">OffWeCGo</div>
-      <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
 
+  <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="OffWeGo Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
           <li class="dropdown">
               <a href="destination.html">Destinations ▾</a>
               <ul class="dropdown-menu">
@@ -76,6 +90,7 @@
     </div>
   </section>
 
+
   <!-- Footer -->
   <footer class="py-4 text-center bg-light">
     <small>© 2025 OffWeCGo — All rights reserved</small>
@@ -84,5 +99,22 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Ready for your next adventure?</h2>
+        <a href="destinations.html" class="btn primary-btn">Discover All Destinations</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 TravelVibes. All Rights Reserved.</p>
+    </footer>
+    <a href="destinations.html#beach" class="btn theme-btn">Explore</a>
+    <a href="destinations.html#mountain" class="btn theme-btn">Explore</a>
+    <a href="destinations.html#urban" class="btn theme-btn">Explore</a>
+    
+    <script src="script.js"></script>
+
 </body>
 </html>
