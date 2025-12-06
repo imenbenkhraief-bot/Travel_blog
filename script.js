@@ -24,8 +24,9 @@ const lightboxImg = document.querySelector('.lightbox-img');
 const lightboxCaption = document.querySelector('.lightbox-caption');
 const lightboxClose = document.querySelector('.lightbox-close');
 
-images.forEach(img => {
-  img.addEventListener('click', () => {
+if (lightbox && lightboxClose) {
+  images.forEach(img=>{
+    img.addEventListener('click', () => {
     lightbox.style.display = 'flex';
     lightboxImg.src = img.src;
     lightboxCaption.textContent = img.parentElement.querySelector('.photo-caption').textContent;
@@ -42,6 +43,7 @@ lightbox.addEventListener('click', e => {
     lightbox.style.display = 'none';
   }
 });
+}
 
 
 /* ===== Smooth Scroll ===== */
@@ -122,10 +124,12 @@ if (logo) {
   });
 
   logo.addEventListener('mouseenter', () => {
+    console.log('Mouse entered - adding hover-forward');
     logo.classList.add('hover-forward');
   });
 
   logo.addEventListener('mouseleave', () => {
+    console.log('Mouse left - removing hover-forward');
     logo.classList.remove('hover-forward');
   });
 }
