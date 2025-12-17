@@ -1,42 +1,18 @@
-/* ===== Scroll Reveal Animation optimized!!! ===== */
-const revealElements = document.querySelectorAll('.reveal');
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal');
 
-let ticking = false;
-
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-
-  revealElements.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
-    if (elementTop < windowHeight - 150) {
-      el.classList.add('show');
-    }
-  });
-
-  
-  ticking = false;
-}
-
-function requestTick() {
-  if (!ticking) {
-    requestAnimationFrame(revealOnScroll);
-    ticking = true;
-  }
-}
-if (revealElements.length > 0) {
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    revealElements.forEach(element => {
-        revealObserver.observe(element);
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        obs.unobserve(entry.target);
+      }
     });
-}
+  }, { threshold: 0.15 });
+
+  reveals.forEach(el => observer.observe(el));
+});
+
 /* ===== Lightbox for Gallery Images ===== */
 const images = document.querySelectorAll('.lightbox-trigger');
 const lightbox = document.getElementById('lightbox');
@@ -159,22 +135,18 @@ function openPlace(destination) {
     const pages = {
         'bali': 'destinations/bali.html',
         'maldives': 'destinations/maldives.html',
-        'zanzibar': 'destinations/zanzibar.html',
         'borabora': 'destinations/borabora.html',
         'hawaii': 'destinations/hawaii.html',
         'dubai': 'destinations/dubai.html',
-        'seychelles': 'destinations/seychelles.html',
         'miami': 'destinations/miami.html',
         'swiss': 'destinations/swiss-alps.html',
         'banff': 'destinations/banff.html',
         'iceland': 'destinations/iceland.html',
-        'peru': 'destinations/peru.html',
         'nepal': 'destinations/nepal.html',
         'newzealand': 'destinations/new-zealand.html',
         'tokyo': 'destinations/tokyo.html',
         'newyork': 'destinations/new-york.html',
         'london': 'destinations/london.html',
-        'paris': 'destinations/paris.html',
         'seoul': 'destinations/seoul.html',
         'venice': 'destinations/venice.html',
         'barcelona': 'destinations/barcelone.html'

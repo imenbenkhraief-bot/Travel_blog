@@ -171,24 +171,6 @@ img {
     font-size: 0.9rem;
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 120%;
-    left: 0;
-    background: white;
-    min-width: 220px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    border-radius: 15px;
-    padding: 0.75rem 0;
-    list-style: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s;
-    background: rgba(255, 255, 255, 0.2);
-    transition: left 0.5s ease;
-}
-
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 32px rgba(236, 72, 153, 0.6);
@@ -500,18 +482,18 @@ img {
 
 /* Background Images */
 .beach-img {
-    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=75'); 
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=75');
 }
 .mountain-img {
-    background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=75'); 
+    background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=75');
 }
 .urban-img {
-    background-image: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=75'); 
+    background-image: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=75');
 }
 .maldives-img { background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34'); }
 .borabora-img { background-image: url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21'); }
 .seychelles-img { background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da'); }
-.swiss alp-img { background-image: url('https://images.unsplash.com/photo-1500048993959-dc1e71e65f19'); }
+.swiss-alp-img { background-image: url('https://images.unsplash.com/photo-1500048993959-dc1e71e65f19'); }
 .bali-img { background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); }
 .banff-img { background-image: url('https://images.unsplash.com/photo-1508261303786-0f45ae639b47'); }
 .tokyo-img { background-image: url('https://images.unsplash.com/photo-1505069442587-67f1df7a4ce3'); }
@@ -792,7 +774,6 @@ footer p {
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
 .reveal.show {
     opacity: 1;
     transform: translateY(0);
