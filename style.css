@@ -508,18 +508,6 @@ img {
 .urban-img {
     background-image: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=75'); 
 }
-.maldives-img { background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34'); }
-.borabora-img { background-image: url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21'); }
-.seychelles-img { background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da'); }
-.swiss alp-img { background-image: url('https://images.unsplash.com/photo-1500048993959-dc1e71e65f19'); }
-.bali-img { background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); }
-.banff-img { background-image: url('https://images.unsplash.com/photo-1508261303786-0f45ae639b47'); }
-.tokyo-img { background-image: url('https://images.unsplash.com/photo-1505069442587-67f1df7a4ce3'); }
-.newyork-img { background-image: url('https://images.unsplash.com/photo-1533106418989-88406c7cc8e0'); }
-.paris-img { background-image: url('https://images.unsplash.com/photo-1522098543979-ffc7f79d6e29'); }
-.barcelona-img { background-image: url('https://images.unsplash.com/photo-1511735643442-503bb3bd348a'); }
-.dubai-img{background-image: url('https://mediafiles.reiseuhu.de/wp-content/uploads/2017/10/Luxus-in-Dubai-1.jpg'); }
-.hawaii-img{background-image: url('https://img.freepik.com/premium-photo/breathtaking-view-tropical-beach-upolu_198067-508717.jpg'); }
 /* ===== FILTERS ===== */
 .filters {
     display: flex;

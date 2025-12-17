@@ -1,4 +1,4 @@
-/* ===== Scroll Reveal Animation optimized!!! ===== */
+
 const revealElements = document.querySelectorAll('.reveal');
 
 let ticking = false;
